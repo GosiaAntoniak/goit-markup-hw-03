@@ -7,8 +7,8 @@
   --white-main-banner: #ffffff;
   --portfolio-button: #f5f4fa;
   --flex-gap: 1.25rem;
+  --button-radius: 4px;
 }
-
 body {
   color: var(--grey);
   background-color: var(--white-main-banner);
@@ -19,6 +19,9 @@ body {
 .container {
   margin: 0 auto;
   width: 1200px;
+}
+.section {
+  padding: 94px 0;
 }
 .header-elements {
   background-color: var(--white-main-banner);
@@ -98,13 +101,12 @@ body {
   border: 0;
   outline: none;
   cursor: pointer;
+  border-radius: var(--button-radius);
 }
 .main-description-box {
   list-style: none;
   display: flex;
   justify-content: flex-start;
-  margin-top: 94px;
-  margin-bottom: 94px;
   padding: 0;
   gap: var(--flex-gap);
 }
@@ -120,9 +122,6 @@ body {
 }
 .main-description-text {
   line-height: 1.71;
-}
-.section-working {
-  margin-bottom: 188px;
 }
 .section-headline {
   color: var(--black);
@@ -212,7 +211,7 @@ about-position {
   font-weight: 500;
   outline: none;
   border: 0;
-  border-radius: 4px;
+  border-radius: var(--button-radius);
   padding: 6px 22px;
   cursor: pointer;
 }
