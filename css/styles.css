@@ -103,6 +103,9 @@ body {
   cursor: pointer;
   border-radius: var(--button-radius);
 }
+.main-description-wrapper {
+  padding-top: 94px;
+}
 .main-description-box {
   list-style: none;
   display: flex;
