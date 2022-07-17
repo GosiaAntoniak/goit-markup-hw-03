@@ -5,6 +5,7 @@
   --white: #e5e5e5;
   --main-banner: #2f303a;
   --white-main-banner: #ffffff;
+  --white-transparent: rgba(255, 255, 255, 0.6);
   --portfolio-button: #f5f4fa;
   --flex-gap: 1.25rem;
   --button-radius: 4px;
@@ -29,6 +30,7 @@ body {
   box-sizing: border-box;
   width: 100%;
   display: block;
+  height: 80px;
 }
 .nav-links a {
   color: var(--black);
@@ -82,15 +84,16 @@ body {
   text-align: center;
   box-sizing: border-box;
 }
-.main-banner > h1 {
-  font-size: 44px;
-  font-weight: 900;
-  line-height: 1.36;
-  text-align: center;
-  text-transform: uppercase;
-}
 .main-banner-description {
   line-height: 1.36;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  width: 696px;
+  margin: 0 auto 30px auto;
+  letter-spacing: 0.06em;
 }
 .button-main {
   color: var(--white-main-banner);
@@ -98,6 +101,8 @@ body {
   font-size: 16px;
   line-height: 1.875;
   padding: 10px 42px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   border: 0;
   outline: none;
   cursor: pointer;
@@ -133,6 +138,10 @@ body {
   line-height: 1.17;
   box-sizing: border-box;
   margin-bottom: 50px;
+  padding: 0px;
+}
+.section-background {
+  background-color: var(--portfolio-button);
 }
 .section-working-kind {
   display: flex;
@@ -148,13 +157,20 @@ body {
   list-style: none;
   padding: 0;
 }
-
+.about-us > li {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
 .about-us figure {
   margin: 0;
+  background-color: var(--white-main-banner);
 }
-.about-us-img {
-  margin-bottom: 30px;
+
+.about-us figcaption {
+  padding: 30px 0;
 }
+
 .about-name {
   color: var(--black);
   font-weight: 500;
@@ -162,11 +178,16 @@ body {
 }
 .about-position {
   text-align: center;
-  margin-bottom: 94px;
 }
 .about-name,
-about-position {
+.about-position {
   line-height: 1.17;
+  margin: 0;
+  font-size: 16px;
+}
+
+.about-name {
+  margin-bottom: 10px;
 }
 .footer {
   background-color: var(--main-banner);
@@ -186,11 +207,22 @@ about-position {
   font-size: 26px;
   color: var(--white);
 }
-.footer-adress {
-  color: var(--white-main-banner);
+
+.footer-address,
+.footer-contact {
+  font-family: "Roboto";
   text-decoration: none;
   padding-top: 20px;
   padding-bottom: 9px;
+  font-weight: 400;
+}
+.footer-address {
+  color: var(--white-main-banner);
+}
+
+.footer-contact {
+  display: block;
+  color: var(--white-transparent);
 }
 .portfolio-button {
   font-size: 16px;
@@ -261,6 +293,7 @@ about-position {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 80px;
 }
 .nav-separator {
   flex-grow: 1;
